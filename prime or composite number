@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int isPrime(int x)
+{
+    int a = x +1, b = 0;
+    for (int i = 1; i <= x; i++)
+    {     
+    if (x%i == 0)
+    {
+        b+=i;
+    }
+    }
+    if (b==a)
+    {
+        cout<<"The number is prime.";
+    }
+    else
+    {
+        cout<<"The number is composite.";
+    }
+    
+}
+
+int main()
+{
+    int a;
+    cout<<"Enter a positive number."<<endl;
+    cin>>a;
+    if (a<0)
+    {
+        cout<<"Number cannot be negative.";
+    }else
+    {    
+    isPrime(a);
+    }
+    return 0;
+}
